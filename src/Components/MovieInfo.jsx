@@ -26,7 +26,7 @@ function MovieInfo(props) {
         {" "}
         <h1>{movieDisplay.Title}</h1>
         <p>Plot: {movieDisplay.Plot}</p>
-        <p>Rating: {movieDisplay.Rating}</p>
+        <p>Rating: {movieDisplay.imdbRating}</p>
         <p>Actors: {movieDisplay.Actors}</p>
         <p>Genre: {movieDisplay.Genre}</p>
         <p>Year: {movieDisplay.Year}</p>
