@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 //match?
 function MovieInfo(props) {
@@ -16,15 +17,29 @@ function MovieInfo(props) {
       .then((data) => {
         setMovieDisplay(data);
       });
-  }, []);
+  });
 
   return (
     //as it reads from the api.
     <div>
-      <h1>{movieDisplay.Title}</h1>
-      <p>{movieDisplay.Plot}</p>
-      <p>{movieDisplay.Genre}</p>
-      <p>{movieDisplay.Year}</p>
+      <div>
+        {" "}
+        <h1>{movieDisplay.Title}</h1>
+        <p>Plot: {movieDisplay.Plot}</p>
+        <p>Rating: {movieDisplay.Rating}</p>
+        <p>Actors: {movieDisplay.Actors}</p>
+        <p>Genre: {movieDisplay.Genre}</p>
+        <p>Year: {movieDisplay.Year}</p>
+        <p>Country: {movieDisplay.Country}</p>
+      </div>
+
+      <div>
+        <Link to={"/"}>
+          <Button size="medium" variant="contained">
+            Back to Main Page
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
