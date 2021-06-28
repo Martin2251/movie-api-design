@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 function MovieInfo(props) {
   let { movieId } = useParams();
 
-  const [movieInfo, setMovieInfo] = useState({});
+  const [movieDisplay, setMovieDisplay] = useState({});
 
   useEffect(function () {
     fetch(`http://www.omdbapi.com/?apikey=24885019&i=${movieId}`)
@@ -14,16 +14,17 @@ function MovieInfo(props) {
         return response.json();
       })
       .then((data) => {
-        setMovieInfo(data);
+        setMovieDisplay(data);
       });
   }, []);
 
   return (
     //as it reads from the api.
     <div>
-      {" "}
-      <p>some text</p>
-      <p>some text</p>
+      <h1>{movieDisplay.Title}</h1>
+      <p>{movieDisplay.Plot}</p>
+      <p>{movieDisplay.Genre}</p>
+      <p>{movieDisplay.Year}</p>
     </div>
   );
 }

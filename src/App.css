@@ -2,6 +2,11 @@
   text-align: justify;
   background-color: #e5e5e5;
 }
+
+a {
+  text-decoration: none;
+}
+
 p {
   color: #14213d;
   font-size: 1.3rem;

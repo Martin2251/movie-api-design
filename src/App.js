@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/movieInfo/:movieID" component={MovieInfo} />
+        <Route exact path="/movieInfo/:movieId" component={MovieInfo} />
         <Box className="App">
           <Header />
           <MainContent />
