@@ -85,7 +85,7 @@ function MainContent() {
                 <p>{film.Title}</p>
                 <p>{film.Year}</p>
                 <Link to={`/movieInfo/${film.imdbID}`}>
-                  <Button size="medium" variant="contained">
+                  <Button size="medium" variant="contained" data-cy="More Info">
                     More Info
                   </Button>
                 </Link>
